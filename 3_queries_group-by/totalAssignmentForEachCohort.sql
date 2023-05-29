@@ -1,0 +1,1 @@
+select co.name as cohort, count(a.id) as total_submissions from assignment_submissions a inner join students s on a.student_id = s.id inner join cohorts co on co.id = s.cohort_id group by co.name order by total_submissions desc

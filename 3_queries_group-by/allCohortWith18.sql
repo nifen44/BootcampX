@@ -1,0 +1,1 @@
+select co.name as cohort_name, count(s.id) as student_count from students s inner join cohorts co on s.cohort_id = co.id group by co.name having count(s.id)>=18 order by student_count;

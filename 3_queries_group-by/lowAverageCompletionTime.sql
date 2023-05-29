@@ -1,0 +1,2 @@
+select s.name as student, avg(a2.duration) as average_assignment_duration, avg(a1.duration) as average_estimated_duration from assignment_submissions a2 inner join assignments a1 on a2.assignment_id = a1.id inner join students s on s.id = a2.student_id where s.end_date is null group by s.name having avg(a2.duration) < avg(a1.duration) order by av
+erage_assignment_duration;
