@@ -1,0 +1,2 @@
+select t.name as teacher, c.name as cohort, count(ar.id) as total_assistances from assistance_requests ar inner join teachers t on t.id = ar.teacher_id inner join students s on s.id = ar.student_id inner join cohorts c on c.id =
+ s.cohort_id where c.name = 'JUL02' group by t.name, c.name order by total_assistances desc;

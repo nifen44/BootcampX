@@ -1,0 +1,1 @@
+select a.day, count(a.id) as number_of_assignments, sum(a.duration) from assignments a group by a.day order by day;

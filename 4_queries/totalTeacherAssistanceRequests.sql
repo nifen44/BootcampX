@@ -1,0 +1,1 @@
+select count(a.id) as total_assistances, t.name from assistance_requests a inner join teachers t on a.teacher_id = t.id where t.name = 'Waylon Boehm' group by t.name;

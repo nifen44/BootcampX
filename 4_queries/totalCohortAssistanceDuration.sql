@@ -1,0 +1,1 @@
+select c.name as cohort, sum(a.completed_at - started_at) as total_duration from assistance_requests a inner join students s on s.id = a.student_id inner join cohorts c on c.id = s.cohort_id group by c.name order by total_duration;

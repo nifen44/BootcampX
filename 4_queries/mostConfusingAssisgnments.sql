@@ -1,0 +1,1 @@
+select a.id, a.name, a.day, a.chapter, count(ar.id) as total_request from assistance_requests ar inner join assignments a on ar.assignment_id = a.id group by a.id order by count(ar.id) desc;
